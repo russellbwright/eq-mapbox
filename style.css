@@ -111,5 +111,11 @@ a:link {
     margin: 10px;
 }
 
+.mainListView {
+    height: 100%;
+    background: #EFEFEF;
+    font-family: 'Open Sans', sans-serif;
+}
+
 
 

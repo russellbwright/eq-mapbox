@@ -51,7 +51,7 @@ var map;
             "significant earthquakes": "http://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/significant_month.geojson"
         }
     };
-
+this.fixIt = function(){
     this.makeQuakeButtons = function(obj, currentProp) {
         var childProps = '';
         for (var prop in quakeButtonInfo[currentProp]) {
@@ -82,35 +82,12 @@ var map;
             }
         });
     });
+
+
+};
+
+
     
-    // var usgsEarthquakes = $.ajax({
-    //     url: "http://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/2.5_day.geojson"
-    // }).done(function(data){
-    //     map.on('load', function(){
-        
-        //     map.addSource("earthquakes", {
-        //         type: "geojson",
-        //         data: data,
-        //         cluster: false,
-                
-        //     });
-            
-
-        //     map.addLayer({
-        //         id: "singleMarkers",
-        //         type: "circle",
-        //         source: "earthquakes",
-        //         paint: {
-        //             "circle-radius": 15,
-        //             "circle-color": '#ff0000',
-        //             "circle-opacity": 1,
-        //             "circle-blur": 0
-        //         }
-        //     });
-            
-        // });
-    // });
-
     this.mapQuest = function(){
         return $http({
             method: 'GET',
@@ -121,7 +98,7 @@ var map;
                 map.addSource("earthquakes", {
                     type: "geojson",
                     data: data.data,
-                    cluster: false,
+                    
                 })
 
                 map.addLayer({
@@ -130,7 +107,7 @@ var map;
                     source: "earthquakes",
                     paint: {
                         "circle-radius": 15,
-                        "circle-color": '#ff0000',
+                        "circle-color": '#6dfaff',
                         "circle-opacity": 1,
                         "circle-blur": 0
                     }
@@ -164,7 +141,7 @@ var map;
     this.quaker = function(){
         return $http({
             method: 'GET',
-            url: "http://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/2.5_day.geojson"
+            url: "http://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/significant_month.geojson"
 
         }).then(function(data){
             

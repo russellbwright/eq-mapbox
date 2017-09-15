@@ -23,6 +23,6 @@ angular.module('earthApp', ['ui.router']).config(function($stateProvider, $urlRo
         })
 
         
-        // $urlRouterProvider
-        //     .otherwise('/');
+        $urlRouterProvider
+            .otherwise('/');
 });
