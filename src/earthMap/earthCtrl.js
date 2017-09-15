@@ -1,4 +1,4 @@
-angular.module('earthApp').controller('earthCtrl', function($scope, earthService){
+angular.module('earthApp').controller('earthCtrl', function($scope, earthService, $state){
 
     $scope.test = earthService.tests;
     earthService.mapQuest().then(function(data){
@@ -7,5 +7,7 @@ angular.module('earthApp').controller('earthCtrl', function($scope, earthService
     })
 
     $scope.quakeButtons = earthService.quakeButtons;
+
+    
 
 })
