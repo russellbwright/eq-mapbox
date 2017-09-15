@@ -1,0 +1,59 @@
+
+
+
+html, body {
+    
+    padding: 0;
+    margin: 0;
+    background-color: #191A1A;
+  }
+
+
+  
+
+  .itemBox{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    /* margin: 15px; */
+    color: #EFEFEF;
+    font-family: sans-serif;
+    letter-spacing: 1px;
+    
+  }
+
+  .mainNavBox{
+      
+    border: 3px solid #EFEFEF ;
+    float: top;
+  }
+
+  #menu {
+    position: absolute;
+    top: 100px;
+    right: 27px;
+    z-index: 50;
+    background: #EFEFEF;
+    font-family: 'Open Sans', sans-serif;
+}
+
+
+/* .mainMapBox {
+    display: flex;
+} */
+
+#map { 
+    width:75%; 
+    float: right;
+    height:100vh;
+    position: relative;
+    
+}
+#feedColumn {
+    width: 25%;
+    height: 100vh;
+    float: left;
+    position: relative;
+    background: #EFEFEF
+}
+

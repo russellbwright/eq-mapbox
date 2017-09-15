@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="earthApp">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://api.mapbox.com/mapbox-gl-js/v0.40.0/mapbox-gl.css' rel='stylesheet' />
+    <link rel="stylesheet" href="style.css">
+    <title>EQ Mapping</title>
+</head>
+<body ng-controller="earthCtrl">
+    
+    <!-- <div class='mainContainer'> -->
+<!-- <div class'BiggestBox'> -->
+    <div class="mainNavBox">
+            <div class="itemBox">
+            
+                <div class="navList" class="leftBoxes" class="navItems"> List </div>
+                <div class="settings" class="leftBoxes" class="navItems"> Settings </div>
+                    <div class="logo" class="leftBoxes" class="navItems" >  
+                    <img src="./img/eqMap.png" style="width: 60px; max-height: 60px" alt="Earthquake Map logo"/> 
+                    </div>
+                 <div class="about" class="rightBoxes" class="navItems"> About </div>
+                <div class="contact" class="rightBoxes" class="navItems"> Contact </div>
+        
+            </div>
+    </div>
+
+    <div id='mainMapBox'>
+            <div id="feedColumn" class='ListBox'> 
+                    <div id="feedSelector"></div>
+            </div>
+            <div id='map' class='mapBox'></div>
+        </div>
+
+    <!-- </div> -->
+<!-- </div> -->
+</body>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.5/angular.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.15/angular-ui-router.js"></script>
+    <script src='https://api.mapbox.com/mapbox-gl-js/v0.40.0/mapbox-gl.js'></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+    <script src="app.js"></script>
+    <script src="./src/earthMap/earthCtrl.js"></script>
+    <script src="./src/earthMap/earthService.js"></script>
+</body>
+</html>
