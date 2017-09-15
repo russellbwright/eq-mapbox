@@ -1,12 +1,22 @@
 angular.module('earthApp').service('earthService', function($http){
-
-    mapboxgl.accessToken = 'pk.eyJ1IjoicnVzc2VsbGJ3cmlnaHQiLCJhIjoiY2o3a3JibWIwMHIxazMycW51NHB4c3VuNCJ9.sZkGh2UGSZKRQORo20LVxA';
-    var map = new mapboxgl.Map({
-    container: 'map',
-    style: 'mapbox://styles/mapbox/dark-v9',
-    center: [-96.79, 32.77],
-    zoom: 5,
-    })
+var map;
+    this.intiMap = function(){
+        mapboxgl.accessToken = 'pk.eyJ1IjoicnVzc2VsbGJ3cmlnaHQiLCJhIjoiY2o3a3JibWIwMHIxazMycW51NHB4c3VuNCJ9.sZkGh2UGSZKRQORo20LVxA';
+        map = new mapboxgl.Map({
+        container: 'map',
+        style: 'mapbox://styles/mapbox/dark-v9',
+        center: [-96.79, 32.77],
+        zoom: 5,
+        })
+        return;
+    }
+    // mapboxgl.accessToken = 'pk.eyJ1IjoicnVzc2VsbGJ3cmlnaHQiLCJhIjoiY2o3a3JibWIwMHIxazMycW51NHB4c3VuNCJ9.sZkGh2UGSZKRQORo20LVxA';
+    // var map = new mapboxgl.Map({
+    // container: 'map',
+    // style: 'mapbox://styles/mapbox/dark-v9',
+    // center: [-96.79, 32.77],
+    // zoom: 5,
+    // })
 
     
     // var layerList = document.getElementById('menu');
@@ -148,11 +158,22 @@ angular.module('earthApp').service('earthService', function($http){
             return data
         })
     }
+
     // this.mapQuest()
 
+    this.quaker = function(){
+        return $http({
+            method: 'GET',
+            url: "http://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/2.5_day.geojson"
+
+        }).then(function(data){
+            
+            return data.data
+        })
+    }
     
 
-  
+
 
 
 

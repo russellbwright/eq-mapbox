@@ -18,10 +18,11 @@ angular.module('earthApp', ['ui.router']).config(function($stateProvider, $urlRo
 
         .state('list', {
             url: '/list',
-            templateUrl: "./src/list/list.html"
+            templateUrl: "./src/list/list.html",
+            controller: "listCtrl"
         })
 
         
         // $urlRouterProvider
-        //     .outherwise('/');
+        //     .otherwise('/');
 });

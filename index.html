@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="style.css">
     <title>EQ Mapping</title>
 </head>
-<body ng-controller="earthCtrl">
+<body>
     
     <!-- <div class='mainContainer'> -->
 <!-- <div class'BiggestBox'> -->
@@ -33,12 +33,12 @@
 
 
 
-    <div id='mainMapBox'>
+    <!-- <div id='mainMapBox'>
             <div id="feedColumn" class='ListBox'> 
                     <div id="feedSelector"></div>
             </div>
             <div id='map' class='mapBox'></div>
-        </div>
+        </div> -->
 
 
 
@@ -47,7 +47,7 @@
 <!-- </div> -->
 </body>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.5/angular.js"></script>
-    <script src="//unpkg.com/angular-ui-router@0.3.1/release/angular-ui-router.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/1.0.3/angular-ui-router.js"></script>
 
 
     <script src='https://api.mapbox.com/mapbox-gl-js/v0.40.0/mapbox-gl.js'></script>
@@ -58,5 +58,6 @@
     <script src="app.js"></script>
     <script src="./src/earthMap/earthCtrl.js"></script>
     <script src="./src/earthMap/earthService.js"></script>
+    <script src="./src/list/listCtrl.js"></script>
 </body>
 </html>
