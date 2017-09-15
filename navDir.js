@@ -1,8 +1,8 @@
 angular.module('earthApp').directive('navDir', function(){
     
         return {
-    
-            template: './navBar.html'
+           
+            templateUrl: './src/navBar/navBar.html'
     
         }
     
