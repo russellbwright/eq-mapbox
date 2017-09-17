@@ -33,6 +33,16 @@ var map;
 
 
 
+    var framesPerSecond = 15; 
+    var initialOpacity = 1
+    var opacity = initialOpacity;
+    var initialRadius = 8;
+    var radius = initialRadius;
+    var maxRadius = 18;
+
+
+    
+
     var quakeButtonInfo = {
         "past hour": {
             "all earthquakes": "http://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_hour.geojson",
@@ -101,17 +111,60 @@ this.fixIt = function(){
                     
                 })
 
+                // map.addLayer({
+                //     id: "singleMarkers",
+                //     type: "circle",
+                //     source: "earthquakes",
+                //     paint: {
+                //         "circle-radius": 15,
+                //         "circle-color": '#6dfaff',
+                //         "circle-opacity": 1,
+                //         "circle-blur": 0
+                //     }
+                // })
+
+                
+
+                // map.addLayer({
+                //     id: "magLayer",
+                //     type: "symbol",
+                //     source: "earthquakes",
+                //     layout: {
+                //         "text-field": "{mag}",
+                //         "text-font": [
+                //                 "DIN Offc Pro Medium",
+                //                 "Arial Unicode MS Bold"
+                //             ],
+                //         "text-size": 12
+                //     },
+                //     paint: {
+                //         "text-color": "#000"
+                //     }
+                // })
+
+
+
                 map.addLayer({
-                    id: "singleMarkers",
-                    type: "circle",
-                    source: "earthquakes",
-                    paint: {
-                        "circle-radius": 15,
-                        "circle-color": '#6dfaff',
-                        "circle-opacity": 1,
-                        "circle-blur": 0
+                    "id": "point",
+                    "source": "earthquakes",
+                    "type": "circle",
+                    "paint": {
+                        "circle-radius": initialRadius,
+                        "circle-radius-transition": {duration: 0},
+                        "circle-opacity-transition": {duration: 0},
+                        "circle-color": "#6dfaff"
                     }
-                })
+                });
+            
+                map.addLayer({
+                    "id": "point1",
+                    "source": "earthquakes",
+                    "type": "circle",
+                    "paint": {
+                        "circle-radius": initialRadius,
+                        "circle-color": "#6dfaff"
+                    }
+                });
 
                 map.addLayer({
                     id: "magLayer",
@@ -128,7 +181,31 @@ this.fixIt = function(){
                     paint: {
                         "text-color": "#000"
                     }
-                });
+                })
+
+                function animateMarker(timestamp) {
+                    setTimeout(function(){
+                        requestAnimationFrame(animateMarker);
+            
+                        radius += (maxRadius - radius) / framesPerSecond;
+                        opacity -= ( .9 / framesPerSecond );
+            
+                        map.setPaintProperty('point', 'circle-radius', radius);
+                        map.setPaintProperty('point', 'circle-opacity', opacity);
+            
+                        if (opacity <= 0) {
+                            radius = initialRadius;
+                            opacity = initialOpacity;
+                        } 
+            
+                    }, 1000 / framesPerSecond);
+                    
+                }
+            
+                // Start the animation.
+                animateMarker(0);
+
+
             })
 
             
