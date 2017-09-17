@@ -38,27 +38,27 @@ var map;
     var opacity = initialOpacity;
     var initialRadius = 8;
     var radius = initialRadius;
-    var maxRadius = 18;
+    var maxRadius = 22;
 
 
     
 
     var quakeButtonInfo = {
-        "past hour": {
-            "all earthquakes": "http://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_hour.geojson",
-            "all 2.5+": "http://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/2.5_hour.geojson"
+        "Past Hour": {
+            "All Earthquakes": "http://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_hour.geojson",
+            "All 2.5+": "http://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/2.5_hour.geojson"
         },
-        "past day": {
-            "all earthquakes": "http://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_day.geojson",
-            "all 4.5+": "http://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/4.5_day.geojson"
+        "Past Day": {
+            "All Earthquakes": "http://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_day.geojson",
+            "All 4.5+": "http://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/4.5_day.geojson"
         },
-        "past week": {
-            "all 2.5+": "http://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/2.5_week.geojson",
-            "all 4.5+": "http://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/4.5_week.geojson"
+        "Past Week": {
+            "All 2.5+": "http://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/2.5_week.geojson",
+            "All 4.5+": "http://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/4.5_week.geojson"
         },
-        "past 30 days": {
-            "all earthquakes": "http://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_month.geojson",
-            "significant earthquakes": "http://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/significant_month.geojson"
+        "Past 30 Days": {
+            "All Earthquakes": "http://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_month.geojson",
+            "Significant Earthquakes": "http://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/significant_month.geojson"
         }
     };
 this.fixIt = function(){
@@ -152,7 +152,7 @@ this.fixIt = function(){
                         "circle-radius": initialRadius,
                         "circle-radius-transition": {duration: 0},
                         "circle-opacity-transition": {duration: 0},
-                        "circle-color": "#6dfaff"
+                        "circle-color": "#FF355E"
                     }
                 });
             

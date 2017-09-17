@@ -22,6 +22,27 @@ html, body {
     
   }
 
+  .navList:hover {
+      text-decoration: underline;
+      text-decoration-color: #EFEFEF;
+      
+  }
+
+  .settings:hover{
+    text-decoration: underline;
+    text-decoration-color: #EFEFEF;
+  }
+
+  .about:hover{
+    text-decoration: underline;
+    text-decoration-color: #EFEFEF;
+  }
+
+  .contact:hover{
+    text-decoration: underline;
+    text-decoration-color: #EFEFEF;
+  }
+
   .mainNavBox{
       
     border: 3px solid #EFEFEF ;
@@ -59,6 +80,37 @@ html, body {
     background: #EFEFEF
 }
 
+#feedSelector{
+    background-color: #EFEFEF;
+    font-size: 22px;
+    margin-left: 5%;
+
+}
+
+.child-prop{
+    background-color: #EFEFEF;
+    display: flex;
+    justify-content: center;
+}
+
+.feed-name{
+    color: #EFEFEF;
+    /* background-color: #3C3C3E; */
+    background-color: #3F3F41;
+    border-radius: 25px;
+    width: 70%;
+
+    padding: 3%;
+}
+
+.feed-name:hover {
+    background-color: #EFEFEF;
+    color: black;
+    /* border: 1px solid black; */
+}
+
+
+
 a:visited { text-decoration: none;
              color:#EFEFEF;
              }
@@ -90,6 +142,7 @@ a:link {
     font-size: 30px;
     font-family: sans-serif;
     font-weight: bold;
+    margin-left: 5%;
 }
 
 .usgsLogo {
@@ -120,7 +173,7 @@ a:link {
 }
 
 
-.ringring {
+/* .ringring {
     border: 3px solid #62bd19;
     -webkit-border-radius: 50px;
     height: 25px;
@@ -133,7 +186,7 @@ a:link {
     0% {-webkit-transform: scale(0.1, 0.1); opacity: 0.0;}
     50% {opacity: 1.0;}
     100% {-webkit-transform: scale(1.2, 1.2); opacity: 0.0;}
-}
+} */
 
 .animated-icon{
     width: 20px;
@@ -143,6 +196,14 @@ a:link {
     box-shadow: 0px 0px 4px white;
     transition: all 1s;
   }
+
+.logoimg {
+    border-radius: 50%;
+}
+
+.contactimgdiv {
+    margin-left: 1%;
+}
 
 
 
