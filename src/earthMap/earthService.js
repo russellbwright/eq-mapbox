@@ -38,7 +38,7 @@ var map;
     var opacity = initialOpacity;
     var initialRadius = 8;
     var radius = initialRadius;
-    var maxRadius = 22;
+    var maxRadius = 23;
 
 
     
@@ -145,26 +145,42 @@ this.fixIt = function(){
 
 
                 map.addLayer({
-                    "id": "point",
-                    "source": "earthquakes",
-                    "type": "circle",
-                    "paint": {
+                    id: "point",
+                    source: "earthquakes",
+                    type: "circle",
+                    paint: {
                         "circle-radius": initialRadius,
                         "circle-radius-transition": {duration: 0},
                         "circle-opacity-transition": {duration: 0},
-                        "circle-color": "#FF355E"
+                        "circle-color": "#FD0E35"
                     }
                 });
             
                 map.addLayer({
-                    "id": "point1",
-                    "source": "earthquakes",
-                    "type": "circle",
-                    "paint": {
+                    id: "point1",
+                    source: "earthquakes",
+                    type: "circle",
+                    paint: {
                         "circle-radius": initialRadius,
-                        "circle-color": "#6dfaff"
+                        "circle-color": "#AAEEFF"
                     }
                 });
+
+                
+                // map.addSource({
+                //     id: "point1",
+                //     source: "earthquakes",
+                //     type: "image",
+                //     url: '../../img/DM.png',
+                //     // paint: {
+                //     //     "circle-radius": initialRadius,
+                //     //     "circle-color": "#6dfaff"
+                //     // }
+                // });
+
+
+              
+
 
                 map.addLayer({
                     id: "magLayer",
@@ -176,12 +192,32 @@ this.fixIt = function(){
                                 "DIN Offc Pro Medium",
                                 "Arial Unicode MS Bold"
                             ],
-                        "text-size": 12
+                        "text-size": 11
                     },
                     paint: {
                         "text-color": "#000"
                     }
                 })
+
+
+                map.on('click', 'point1', function(e){
+                    new mapboxgl.Popup()
+                     .setLngLat(e.features[0].geometry.coordinates)
+                     .setHTML(e.features[0].properties.title)
+                     .addTo(map);
+                });
+ 
+                map.on('mouseenter', 'point1', function(){
+                    map.getCanvas().style.cursor = 'pointer';
+                });
+ 
+                map.on('mouseleave', 'point1', function(){
+                    map.getCanvas().style.cursor = '';
+                });
+
+
+                // control.scale().addTo(map);
+
 
                 function animateMarker(timestamp) {
                     setTimeout(function(){
@@ -193,7 +229,7 @@ this.fixIt = function(){
                         map.setPaintProperty('point', 'circle-radius', radius);
                         map.setPaintProperty('point', 'circle-opacity', opacity);
             
-                        if (opacity <= 0) {
+                        if (opacity <= .1) {
                             radius = initialRadius;
                             opacity = initialOpacity;
                         } 

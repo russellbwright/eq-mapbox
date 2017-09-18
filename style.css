@@ -8,8 +8,18 @@ html, body {
     background-color: #191A1A;
   }
 
-
+  .mainSideViews {
+    background: #EFEFEF;
+    height: 100vh;
+   
+}
   
+.mainListView {
+    height: 100%;
+    background: #EFEFEF;
+    font-family: 'Open Sans', sans-serif;
+}
+
 
   .itemBox{
     display: flex;
@@ -119,11 +129,7 @@ a:link {
     text-decoration: none;
 }
 
-.mainSideViews {
-    background: #EFEFEF;
-    height: 100vh;
-   
-}
+
 
 .contactBox {
    display: flex;
@@ -166,11 +172,6 @@ a:link {
     margin: 10px;
 }
 
-.mainListView {
-    height: 100%;
-    background: #EFEFEF;
-    font-family: 'Open Sans', sans-serif;
-}
 
 
 /* .ringring {

@@ -1,6 +1,6 @@
 angular.module('earthApp').controller('earthCtrl', function($scope, earthService, $state){
     $scope.test = earthService.tests;
-    // angular.element(document).ready(function(){
+    angular.element(document).ready(function(){
         // earthService.markerMe()
         earthService.intiMap()
         earthService.fixIt()
@@ -9,7 +9,7 @@ angular.module('earthApp').controller('earthCtrl', function($scope, earthService
         })
         $scope.quakeButtons = earthService.quakeButtons;
         
-    // })
+    })
 
     
     // earthService.intiMap()
