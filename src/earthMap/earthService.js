@@ -254,7 +254,7 @@ this.fixIt = function(){
     this.quaker = function(){
         return $http({
             method: 'GET',
-            url: "http://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/significant_month.geojson"
+            url: "https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/significant_month.geojson"
 
         }).then(function(data){
             
