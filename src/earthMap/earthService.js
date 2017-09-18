@@ -45,20 +45,20 @@ var map;
 
     var quakeButtonInfo = {
         "Past Hour": {
-            "All Earthquakes": "http://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_hour.geojson",
-            "All 2.5+": "http://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/2.5_hour.geojson"
+            "All Earthquakes": "https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_hour.geojson",
+            "All 2.5+": "https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/2.5_hour.geojson"
         },
         "Past Day": {
-            "All Earthquakes": "http://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_day.geojson",
-            "All 4.5+": "http://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/4.5_day.geojson"
+            "All Earthquakes": "https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_day.geojson",
+            "All 4.5+": "https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/4.5_day.geojson"
         },
         "Past Week": {
-            "All 2.5+": "http://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/2.5_week.geojson",
-            "All 4.5+": "http://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/4.5_week.geojson"
+            "All 2.5+": "https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/2.5_week.geojson",
+            "All 4.5+": "https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/4.5_week.geojson"
         },
         "Past 30 Days": {
-            "All Earthquakes": "http://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_month.geojson",
-            "Significant Earthquakes": "http://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/significant_month.geojson"
+            "All Earthquakes": "https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_month.geojson",
+            "Significant Earthquakes": "https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/significant_month.geojson"
         }
     };
 this.fixIt = function(){
@@ -101,7 +101,7 @@ this.fixIt = function(){
     this.mapQuest = function(){
         return $http({
             method: 'GET',
-            url: "http://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/2.5_day.geojson"
+            url: "https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/2.5_day.geojson"
 
         }).then(function(data){
             map.on('load', function(){
