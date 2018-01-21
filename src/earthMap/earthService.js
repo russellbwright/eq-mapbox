@@ -1,7 +1,7 @@
 angular.module('earthApp').service('earthService', function($http){
 var map;
     this.intiMap = function(){
-        mapboxgl.accessToken = 'pk.eyJ1IjoicnVzc2VsbGJ3cmlnaHQiLCJhIjoiY2o3a3JibWIwMHIxazMycW51NHB4c3VuNCJ9.sZkGh2UGSZKRQORo20LVxA';
+        mapboxgl.accessToken = 'pk.eyJ1IjoicnVzc2VsbGJ3cmlnaHQiLCJhIjoiY2pjcDVia3NyMmZzazJ5bjN2OHJuemo4bSJ9.9xQuWA9DKZzkWbr12LRx4w';
         map = new mapboxgl.Map({
         container: 'map',
         style: 'mapbox://styles/mapbox/dark-v9',
